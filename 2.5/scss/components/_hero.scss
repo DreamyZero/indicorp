@@ -1,0 +1,117 @@
+@use 'variables';
+
+.hero {
+    background-image: url('../img/hero.jpg');
+    background-size: cover;
+    padding: 80px 0 200px;
+
+    @media screen and (min-width: 768px) {
+        padding: 180px 0 0;
+    }
+
+    &__content {
+        text-align: center;
+
+        @media screen and (min-width: 768px) {
+            width: calc(50% - 30px);
+            text-align: start;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 40px;
+        letter-spacing: 0.2px;
+        color: variables.$text-color;
+        margin-bottom: 40px;
+
+        @media screen and (min-width: 768px) {
+            font-weight: 800;
+            font-size: 58px;
+            margin-bottom: 35px;
+        }
+    }
+
+    &__description {
+        font-weight: 500;
+        font-size: 20px;
+        letter-spacing: 0.2px;
+        margin-bottom: 40px;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 35px;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+        }
+    }
+
+    &__services {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 80px;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            margin-bottom: -20px;
+        }
+    }
+
+    &__service {
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            width: calc(33.3% - 20px);
+        }
+    }
+}
+
+.service-card {
+    padding: 35px 40px;
+    background-color: #fff;
+    transition: color .5s ease, background-color .5s ease;
+    
+    @media screen and (min-width: 768px) {
+        box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+    }
+
+    &:hover {
+        color: white;
+        background-color: variables.$secondary-color;
+
+        .service-card {
+            &__title, &__icon {
+                color: #fff;
+            }
+        }
+    }
+
+    &__icon {
+        margin-bottom: 10px;
+        color: variables.$secondary-color;
+        transition: color .5s ease;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        letter-spacing: 0.1px;
+        color: variables.$text-color;
+        margin-bottom: 10px;
+        transition: color .5s ease;
+    }
+
+    &__description {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}

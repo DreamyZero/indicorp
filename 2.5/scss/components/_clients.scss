@@ -1,0 +1,52 @@
+.clients {
+    background-color: #FAFAFA;
+    padding: 50px 0 80px;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+
+        @media screen and (min-width: 576px) {
+            gap: 50px;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (min-width: 768px) {
+            justify-content: space-around;
+        }
+
+        @media screen and (min-width: 992px) {
+            justify-content: space-between;
+        }
+    }
+}
+
+.form {
+    &__field {
+        display: flex;
+        position: relative;
+    }
+
+    &__input {
+        background-color: #F9F9F9;
+        border: 1px solid #E6E6E6;
+        border-radius: 5px;
+        padding: 15px 20px;
+        width: 100%;
+    }
+
+    &__button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        cursor: pointer;
+        border: none;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}

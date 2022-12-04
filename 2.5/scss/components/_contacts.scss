@@ -1,0 +1,60 @@
+@use 'variables';
+
+.contacts {
+    background-color: #F3F3F3;
+
+    &__list {
+        margin-top: 60px;
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+
+        @media screen and (min-width: 768px) {
+            margin-top: 80px;
+            flex-direction: row;
+            gap: 0;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            width: calc(100% / 3);
+        }
+    }
+}
+
+.contact-card {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+    color: variables.$text-color;
+
+    &:nth-child(2) {
+        padding: 80px 50px;
+        background-color: #252B42;
+        color: #fff;
+    }
+    
+    &__image {
+        margin-bottom: 15px;
+    }
+    
+    &__element {
+        font-weight: 600;
+        font-size: 14px;
+
+        &:last-of-type {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.1px;
+        margin-bottom: 15px;
+    }
+}

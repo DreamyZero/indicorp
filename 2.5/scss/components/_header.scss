@@ -1,0 +1,76 @@
+@use 'variables';
+
+.header {
+    padding: 40px 0;
+
+    @media screen and (min-width: 768px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    &__wrapper {
+        display: grid;
+        width: 100%;
+        grid-template-areas:
+        'logo functions'
+        'nav nav';
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+        }
+    }
+
+    &__logo {
+        grid-area: logo;
+
+        color: variables.$text-color;
+        font-weight: 700;
+        font-size: 24px;
+        letter-spacing: 0.1px;
+
+    }
+
+    &__nav {
+        grid-area: nav;
+        margin: 80px auto 0;
+
+        @media screen and (min-width: 768px) {
+            margin: 0;
+        }
+    }
+
+    &__functions {
+        grid-area: functions;
+        display: flex;
+        justify-content: flex-end;
+        gap: 30px;
+        
+        @media screen and (min-width: 768px) {
+            margin-left: auto;
+            gap: 20px;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            gap: 20px;
+        }
+    }
+}
+
+.menu {
+    &__link {
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0.2px;
+    }
+}

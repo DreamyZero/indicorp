@@ -1,0 +1,93 @@
+@use 'variables';
+
+.about {
+    &__content {
+        margin-top: 100px;
+        
+        @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__video {
+        position: relative;
+        width: 100%;
+        margin-bottom: 70px;
+        
+        @media screen and (min-width: 768px) {
+            width: calc(66.6%);
+            margin-bottom: 0;
+        }
+    }
+
+    &__preview {
+        max-width: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__button {
+        position: absolute;
+        top: calc(50% - 50px);
+        left: calc(50% - 50px);
+
+        height: 100px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        background-color: variables.$secondary-color;
+        border-radius: 75px;
+        color: #fff;
+        transition: background-color .5s ease;
+
+        &:hover {
+            background-color: variables.$primary-color;
+        }
+    }
+
+    &__description {
+
+        @media screen and (min-width: 768px) {
+            width: calc(33.3% - 50px);
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 40px;
+        letter-spacing: 0.2px;
+        color: variables.$text-color;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        margin-bottom: 50px;
+        font-size: 14px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+.feature {
+    display: flex;
+    gap: 20px;
+    
+    &__title {
+        color: variables.$text-color;
+        font-weight: 700;
+    }
+
+    &__text {
+        font-size: 14px;
+        font-weight: 600;
+    }
+}

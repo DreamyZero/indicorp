@@ -1,0 +1,41 @@
+@use 'variables';
+
+.section {
+    padding: 80px 0;
+
+    &--line {
+        padding: 40px 0;
+
+        .section {
+            &__header {
+                text-align: start;
+                margin: 0;
+                max-width: 100%;
+            }
+
+            &__title {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__header {
+        max-width: 470px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 40px;
+        letter-spacing: 0.2px;
+        color: variables.$text-color;
+        margin-bottom: 15px;
+    }
+
+    &__description {
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0.2px;
+    }
+}
